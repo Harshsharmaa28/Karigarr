@@ -1,15 +1,62 @@
+'use client'
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-
+import React from 'react'
+import { AlertCircle, X } from 'lucide-react'
+import { useState ,useEffect} from 'react';
+function Warn() {
+    return (
+        <div className="z-10">
+            <div className="rounded-md border-l-4 border-yellow-500 bg-yellow-100 p-4">
+                <div className="flex items-center justify-between space-x-4">
+                    <div>
+                        <AlertCircle className="h-6 w-6 text-yellow-600" />
+                    </div>
+                    <div>
+                        <p className="text-sm font-medium text-yellow-600">
+                            We are Adding this Feature soon.
+                        </p>
+                    </div>
+                    <div>
+                        <X className="h-6 w-6 cursor-pointer text-yellow-600" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
 export default function Account() {
+
+    const [showWarn, setShowWarn] = useState(false);
+    useEffect(() => {
+        if (showWarn) {
+          // Automatically hide the warning after 2000 milliseconds (2 seconds)
+          const timeoutId = setTimeout(() => {
+            setShowWarn(false);
+          }, 2000);
+    
+          // Clean up the timeout when the component unmounts or when showWarn changes
+          return () => {
+            clearTimeout(timeoutId);
+          };
+        }
+      }, [showWarn]);
+    
+    //   const handleButtonClick = () => {
+    //     setShowWarn(true);
+    //   };
     return (
         <div className=" bg-gradient-to-t from-transparent via-white to-blue-200 w-screen h-screen flex gap-20">
+            <div className=' absolute w-screen'>
+            {showWarn && <Warn />}
+            </div>
             <div className="flex flex-col gap-2 ml-10">
-                <img src="/tailor.png" className=" bg-cover w-[300px] h-[400px] rounded-2xl mt-10" />
+                <img src="/comp1.jpg" className=" bg-cover w-[300px] h-[400px] rounded-2xl mt-10" />
                 <div className="flex gap-10 ml-16">
-                    <button className=" p-1 gap-2 flex rounded-md border border-black w-[4.5rem]">
+                    <button onClick={() => setShowWarn(true)} className=" p-1 gap-2 flex rounded-md border border-black w-[4.5rem]">
                         <img src="/call.png" className=" w-[1rem] mt-1" />Call</button>
-                    <button className=" p-1 gap-1 flex rounded-md border border-black w-[4.5rem]">
+                    <button onClick={() => setShowWarn(true)} className=" p-1 gap-1 flex rounded-md border border-black w-[4.5rem]">
                         <img src="/chat.png" className=" w-[1rem] mt-1" />Chat</button>
+
                 </div>
             </div>
             <div className=' mt-10 flex flex-col custom-scrollbar w-[65vw] overflow-hidden'>

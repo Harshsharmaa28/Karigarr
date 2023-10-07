@@ -29,6 +29,7 @@ module.exports = {
       backgroundImage: {
         'radial-gradient': 'radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(221, 199, 247, 1) 100%)',
       },
+
     },
   },
   plugins: [],

@@ -64,7 +64,7 @@ export default function Faqs() {
                         <div class="py-5 flex flex-col gap-5">
                             <details class="group">
                                 <summary class="flex justify-between items-center font-medium cursor-pointer list-none w-[50vw]">
-                                    <span className=" font-bold text-xl">Q1. What are the Benifits of using this Platform ?</span>
+                                    <span className=" font-bold text-xl">Q4. What types of services are avialable here ?</span>
                                     <span class="transition group-open:rotate-180">
                                         <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
                                         </svg>
