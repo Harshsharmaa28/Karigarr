@@ -20,8 +20,8 @@ import Customer from '@/components/customer';
 import Chat from '@/components/chat';
 export default function Home() {
   return (
-    <main className=' overflow-hidden'>
-      <div className='w-[100%] h-[100%] overflow-x-hidden'>
+    <main className=' vsm:max-w-screen-md:w-screen'>
+      <div className='vsm:max-w-screen-md:w-screen overflow-x-hidden'>
         <Navbar></Navbar>
         <Homepage></Homepage>
         <Topservice></Topservice>

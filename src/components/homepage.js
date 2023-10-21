@@ -1,4 +1,5 @@
-
+'use client'
+import Link from "next/link"
 export default function Homepage() {
     return (
         <div className="bg-gradient-to-b from-transparent via-[#D9D9D9] to-[#9cb0f7] w-screen h-screen relative">
@@ -9,7 +10,7 @@ export default function Homepage() {
                     <p className=" opacity-70">One step solution for all your problems</p>
                 </div>
                 <button className=" absolute bg-gradient-to-b from-[#c960fa] to-[#685de6] w-[11rem] p-2 h-[2.7rem] ml-[7rem] mt-[60vh] rounded-lg text-xl text-white opacity-80">
-                        Get Started
+                <Link href={'/login'}>Get Started</Link>
                     </button>
             </div>
             <div className=" w-[600px]  absolute ml-[50vw] mt-[17vh]">
